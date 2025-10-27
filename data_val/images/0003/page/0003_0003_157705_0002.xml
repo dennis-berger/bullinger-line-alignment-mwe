@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=READ-COOP:name=TrHtr:version=1.9.0:model_id=51170:date=14_05_2023_19:09</Creator>
+        <Created>2021-10-04T08:42:44.368+02:00</Created>
+        <LastChange>2025-05-28T09:56:44.221+02:00</LastChange>
+    </Metadata>
+    <Page imageFilename="0003_0003_157705_0002.tif" imageWidth="3522" imageHeight="2839">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1750319832147" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r1"/>
+                <RegionRefIndexed index="1" regionRef="r2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="r1" custom="readingOrder {index:0;}">
+            <Coords points="266,570 260,842 768,869 774,597"/>
+            <TextLine id="line_1748418183454_518" custom="readingOrder {index:0;}">
+                <Coords points="746,712 290,712 290,574 746,574"/>
+                <TextEquiv>
+                    <Unicode>{MN}</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1748418187104_521" custom="readingOrder {index:1;}">
+                <Coords points="783,796 257,796 257,709 783,709"/>
+                <TextEquiv>
+                    <Unicode>{MN}</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1748418189187_524" custom="readingOrder {index:2;}">
+                <Coords points="566,872 404,872 404,772 566,772"/>
+                <TextEquiv>
+                    <Unicode>{MN}</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>{MN}
+{MN}
+{MN}</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion orientation="0.0" id="r2" custom="readingOrder {index:1;}">
+            <Coords points="657,133 654,2006 3384,2006 3387,133"/>
+            <TextLine id="line_1748418206703_531" custom="readingOrder {index:0;}">
+                <Coords points="3322,205 3181,205 3181,136 3322,136"/>
+                <TextEquiv>
+                    <Unicode>{MT}</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l2" custom="readingOrder {index:1;}">
+                <Coords points="661,534 3345,531 3299,397 2531,481 661,391"/>
+                <Baseline points="680,515 813,515 947,516 1080,516 1214,518 1347,518 1481,518 1614,519 1748,519 1881,519 2015,519 2148,518 2282,518 2415,518 2549,518 2682,516 2816,516 2949,515 3083,515 3216,513 3350,512"/>
+                <TextEquiv>
+                    <Unicode>P. D. in Ch r ist um Venerade et amatiss: Bullingere magnas tibi gras ago per lus</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l3" custom="readingOrder {index:2;}">
+                <Coords points="768,651 3259,638 3342,541 768,568"/>
+                <Baseline points="786,609 914,611 1042,611 1170,612 1298,612 1427,611 1555,611 1683,609 1811,609 1939,608 2068,606 2196,606 2324,605 2452,605 2580,603 2708,603 2837,603 2965,605 3093,605 3221,607 3350,609"/>
+                <TextEquiv>
+                    <Unicode>nus. Prisé expectauit senex nost atroriora ab Antichro, et abatus. In ono collo¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l5" custom="readingOrder {index:3;}">
+                <Coords points="781,708 3158,741 3332,704 3332,618 781,661"/>
+                <Baseline points="801,684 927,687 1054,690 1181,692 1308,693 1434,694 1561,695 1688,695 1815,695 1941,695 2068,695 2195,695 2322,695 2448,695 2575,695 2702,693 2829,693 2955,693 3082,695 3209,695 3336,695"/>
+                <TextEquiv>
+                    <Unicode>cauit ocum fiduria sua. huc orabitis nobiscu, ne sinat dicar hostes sin nois: Vbi</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l7" custom="readingOrder {index:4;}">
+                <Coords points="785,805 3345,798 3319,704 781,708"/>
+                <Baseline points="804,774 931,773 1059,771 1186,771 1314,771 1441,771 1569,771 1696,773 1824,773 1951,774 2079,776 2206,777 2334,779 2461,780 2589,782 2716,783 2844,783 2971,785 3099,785 3226,785 3354,785"/>
+                <TextEquiv>
+                    <Unicode>C Chrud istorum! Colonia cui tota cum praepuis ex capitulo, et maiore parte fu</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l8" custom="readingOrder {index:5;}">
+                <Coords points="791,885 2905,905 3359,868 3359,798 791,808"/>
+                <Baseline points="810,867 937,861 1065,855 1193,851 1321,848 1449,846 1576,845 1704,845 1832,846 1960,846 2088,848 2215,851 2343,852 2471,855 2599,857 2727,858 2854,860 2982,861 3110,861 3238,861 3366,861"/>
+                <TextEquiv>
+                    <Unicode>rit contra nos intredibili furore, non est ligatoem, sed extinctoem seins molie,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l9" custom="readingOrder {index:6;}">
+                <Coords points="788,968 3202,978 3355,955 3355,868 788,911"/>
+                <Baseline points="807,951 934,945 1062,940 1189,936 1317,933 1445,930 1572,927 1700,926 1828,926 1955,926 2083,926 2211,926 2338,927 2466,929 2594,930 2721,932 2849,935 2977,936 3104,939 3232,941 3360,944"/>
+                <TextEquiv>
+                    <Unicode>tis. Couentus Procuris hebit. 23. Julii ad concludendum de Reformator, mij</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l10" custom="readingOrder {index:7;}">
+                <Coords points="781,1072 3282,1058 3335,952 785,968"/>
+                <Baseline points="798,1035 925,1032 1052,1028 1179,1025 1306,1022 1434,1019 1561,1016 1688,1013 1815,1011 1942,1010 2070,1007 2197,1007 2324,1005 2451,1005 2578,1005 2706,1007 2833,1008 2960,1010 3087,1011 3214,1014 3342,1019"/>
+                <TextEquiv>
+                    <Unicode>formula composita u. In quo conuetu nisi pnq. retineat in officio tres reliquos</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l11" custom="readingOrder {index:8;}">
+                <Coords points="791,1145 2564,1152 3379,1105 3379,1022 795,1075"/>
+                <Baseline points="810,1125 938,1122 1067,1119 1196,1116 1324,1113 1453,1109 1582,1106 1710,1103 1839,1100 1968,1098 2097,1095 2225,1094 2354,1091 2483,1089 2611,1089 2740,1089 2869,1089 2997,1089 3126,1091 3255,1094 3384,1095"/>
+                <TextEquiv>
+                    <Unicode>à Caplo. ordines, comitusen, Eqtum, et oppidoru, magna erit sanctorum deicetio¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l12" custom="readingOrder {index:9;}">
+                <Coords points="805,1245 2017,1179 3252,1249 3372,1139 805,1162"/>
+                <Baseline points="822,1218 956,1211 1091,1205 1226,1198 1360,1193 1495,1188 1630,1185 1764,1182 1899,1179 2034,1178 2168,1178 2303,1176 2438,1176 2572,1178 2707,1178 2842,1179 2976,1181 3111,1182 3246,1185 3381,1187"/>
+                <TextEquiv>
+                    <Unicode>et contra nomo chri in sultatio apud Impios. Bellis, et Epiturismo. Chrique apte</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l13" custom="readingOrder {index:10;}">
+                <Coords points="811,1352 1946,1272 3329,1325 3365,1219 815,1245"/>
+                <Baseline points="830,1304 957,1298 1084,1293 1211,1289 1338,1284 1465,1281 1592,1277 1719,1274 1846,1272 1973,1269 2100,1268 2227,1268 2354,1266 2481,1266 2608,1268 2735,1268 2862,1269 2989,1272 3116,1274 3243,1278 3371,1281"/>
+                <TextEquiv>
+                    <Unicode>oppugnatoe Germania fatu suu acrelerat. Dnus aut sine omn avducat, plaenaqe</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l14" custom="readingOrder {index:11;}">
+                <Coords points="795,1426 3108,1406 3365,1325 2805,1265 798,1352"/>
+                <Baseline points="815,1400 942,1395 1070,1391 1198,1386 1326,1382 1454,1377 1581,1373 1709,1370 1837,1367 1965,1363 2093,1360 2220,1358 2348,1355 2476,1355 2604,1353 2732,1352 2859,1353 2987,1353 3115,1355 3243,1356 3371,1359"/>
+                <TextEquiv>
+                    <Unicode>suoru redemptoez fatiat, aut seruet et angeat paru su u gregé, ne sile stat in</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l15" custom="readingOrder {index:12;}">
+                <Coords points="801,1492 3339,1462 3339,1382 2948,1366 805,1422"/>
+                <Baseline points="821,1482 947,1475 1073,1469 1199,1464 1325,1460 1451,1456 1577,1453 1704,1451 1830,1449 1956,1448 2082,1446 2208,1446 2334,1445 2460,1445 2587,1445 2713,1445 2839,1443 2965,1443 3091,1442 3217,1442 3344,1439"/>
+                <TextEquiv>
+                    <Unicode>uoratio nois cuis. Comenda me, qugo, diligent dymistis tius oib., quos cum</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l16" custom="readingOrder {index:13;}">
+                <Coords points="811,1599 3365,1553 3329,1469 2982,1439 815,1496"/>
+                <Baseline points="833,1580 959,1571 1086,1564 1213,1558 1340,1553 1467,1550 1594,1547 1721,1544 1848,1543 1975,1542 2102,1541 2228,1541 2355,1541 2482,1541 2609,1541 2736,1539 2863,1538 2990,1537 3117,1535 3244,1532 3371,1527"/>
+                <TextEquiv>
+                    <Unicode>Entia et Schola uestra Chrij custoriat et bndicat Anno. Idem nobis praeter. o. Phi¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l17" custom="readingOrder {index:14;}">
+                <Coords points="818,1716 1018,1723 1159,1659 1212,1693 1289,1663 1399,1743 1726,1723 1906,1683 1910,1563 1516,1596 1452,1559 1272,1616 1222,1573 1042,1619 821,1603"/>
+                <Baseline points="837,1668 891,1667 945,1664 999,1661 1053,1659 1107,1658 1161,1655 1215,1653 1269,1652 1323,1650 1377,1649 1431,1647 1485,1646 1539,1644 1593,1644 1647,1643 1701,1641 1755,1641 1809,1640 1863,1638 1917,1638"/>
+                <TextEquiv>
+                    <Unicode>lippus, et Pistorii. Bonum 21 Julii</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l18" custom="readingOrder {index:15;}">
+                <Coords points="2724,1886 2808,1923 2918,1886 2968,1923 3045,1906 3078,1926 3135,1896 3148,1910 3209,1900 3209,1813 3122,1843 3062,1840 2978,1776 2881,1793 2808,1743 2778,1770 2724,1766"/>
+                <Baseline points="2744,1880 2770,1876 2796,1873 2822,1871 2848,1870 2875,1869 2901,1868 2927,1868 2953,1868 2980,1869 3006,1870 3032,1871 3058,1872 3084,1872 3111,1874 3137,1874 3163,1875 3189,1875 3216,1877"/>
+                <TextEquiv>
+                    <Unicode>M. Baccrus</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l19" custom="readingOrder {index:16;}">
+                <Coords points="2754,2010 2781,2007 2828,2037 2865,2020 2908,2033 2968,2020 3002,2047 3088,1987 3128,2010 3202,1990 3199,1903 3135,1900 3078,1926 3045,1903 2948,1920 2928,1940 2871,1913 2751,1913"/>
+                <Baseline points="2769,1977 2794,1976 2820,1974 2846,1974 2872,1973 2898,1974 2924,1974 2950,1975 2976,1976 3001,1977 3027,1979 3053,1980 3079,1981 3105,1982 3131,1984 3157,1985 3183,1986 3209,1986"/>
+                <TextEquiv>
+                    <Unicode>tuym Dno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>{MT}
+P. D. in Ch r ist um Venerade et amatiss: Bullingere magnas tibi gras ago per lus
+nus. Prisé expectauit senex nost atroriora ab Antichro, et abatus. In ono collo¬
+cauit ocum fiduria sua. huc orabitis nobiscu, ne sinat dicar hostes sin nois: Vbi
+C Chrud istorum! Colonia cui tota cum praepuis ex capitulo, et maiore parte fu
+rit contra nos intredibili furore, non est ligatoem, sed extinctoem seins molie,
+tis. Couentus Procuris hebit. 23. Julii ad concludendum de Reformator, mij
+formula composita u. In quo conuetu nisi pnq. retineat in officio tres reliquos
+à Caplo. ordines, comitusen, Eqtum, et oppidoru, magna erit sanctorum deicetio¬
+et contra nomo chri in sultatio apud Impios. Bellis, et Epiturismo. Chrique apte
+oppugnatoe Germania fatu suu acrelerat. Dnus aut sine omn avducat, plaenaqe
+suoru redemptoez fatiat, aut seruet et angeat paru su u gregé, ne sile stat in
+uoratio nois cuis. Comenda me, qugo, diligent dymistis tius oib., quos cum
+Entia et Schola uestra Chrij custoriat et bndicat Anno. Idem nobis praeter. o. Phi¬
+lippus, et Pistorii. Bonum 21 Julii
+M. Baccrus
+tuym Dno</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

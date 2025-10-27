@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-04-23T13:06:17.922+02:00</Created>
+        <LastChange>2025-06-12T22:40:56.163+02:00</LastChange>
+        <TranskribusMetadata docId="9006215" pageId="98979881" pageNr="2" tsid="247706097" status="GT" userId="70106" imgUrl="https://files.transkribus.eu/Get?id=RRIRLGPDTCVXDIDARCPBCARK&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=FHPTTQYEUAZELYCKDFXAJNKM" imageId="80045858"/>
+    </Metadata>
+    <Page imageFilename="p002.jpg" imageWidth="3508" imageHeight="2479">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1757331192460" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="1720,1284 1720,1645 2977,1645 2977,1284"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="1720,1350 1781,1347 1843,1345 1905,1347 1967,1342 2029,1344 2090,1341 2152,1341 2214,1341 2276,1342 2338,1342 2399,1338 2461,1338 2523,1338 2585,1339 2647,1341 2708,1341 2770,1342 2832,1344 2894,1348 2956,1350 2956,1296 2894,1294 2832,1290 2770,1288 2708,1287 2647,1287 2585,1285 2523,1284 2461,1284 2399,1284 2338,1288 2276,1288 2214,1287 2152,1287 2090,1287 2029,1290 1967,1288 1905,1293 1843,1291 1781,1293 1720,1296"/>
+                <Baseline points="1720,1332 1781,1329 1843,1327 1905,1329 1967,1324 2029,1326 2090,1323 2152,1323 2214,1323 2276,1324 2338,1324 2399,1320 2461,1320 2523,1320 2585,1321 2647,1323 2708,1323 2770,1324 2832,1326 2894,1330 2956,1332"/>
+                <TextEquiv>
+                    <Unicode>Dem wolgelerten frommen und acht¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="1774,1430 1833,1425 1893,1424 1953,1421 2013,1419 2073,1415 2133,1415 2192,1413 2252,1409 2312,1410 2372,1406 2432,1406 2492,1406 2552,1406 2611,1406 2671,1406 2731,1406 2791,1412 2851,1412 2911,1414 2971,1415 2971,1361 2911,1360 2851,1358 2791,1358 2731,1352 2671,1352 2611,1352 2552,1352 2492,1352 2432,1352 2372,1352 2312,1356 2252,1355 2192,1359 2133,1361 2073,1361 2013,1365 1953,1367 1893,1370 1833,1371 1774,1376"/>
+                <Baseline points="1774,1412 1833,1407 1893,1406 1953,1403 2013,1401 2073,1397 2133,1397 2192,1395 2252,1391 2312,1392 2372,1388 2432,1388 2492,1388 2552,1388 2611,1388 2671,1388 2731,1388 2791,1394 2851,1394 2911,1396 2971,1397"/>
+                <TextEquiv>
+                    <Unicode>barnn herren Oswalden Myco¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="1771,1508 1831,1505 1891,1503 1951,1502 2012,1501 2072,1499 2132,1499 2193,1499 2253,1502 2313,1496 2374,1494 2434,1490 2494,1491 2554,1491 2615,1490 2675,1490 2735,1492 2796,1496 2856,1495 2916,1493 2977,1496 2977,1442 2916,1439 2856,1441 2796,1442 2735,1438 2675,1436 2615,1436 2554,1437 2494,1437 2434,1436 2374,1440 2313,1442 2253,1448 2193,1445 2132,1445 2072,1445 2012,1447 1951,1448 1891,1449 1831,1451 1771,1454"/>
+                <Baseline points="1771,1490 1831,1487 1891,1485 1951,1484 2012,1483 2072,1481 2132,1481 2193,1481 2253,1484 2313,1478 2374,1476 2434,1472 2494,1473 2554,1473 2615,1472 2675,1472 2735,1474 2796,1478 2856,1477 2916,1475 2977,1478"/>
+                <TextEquiv>
+                    <Unicode>nien, prädicanten zum domstifft Ba¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="1780,1594 1839,1589 1898,1589 1957,1586 2016,1583 2075,1580 2134,1580 2193,1580 2252,1577 2311,1578 2371,1578 2430,1577 2489,1573 2548,1569 2607,1568 2666,1568 2725,1566 2784,1568 2843,1568 2902,1568 2962,1574 2962,1529 2902,1523 2843,1523 2784,1523 2725,1521 2666,1523 2607,1523 2548,1524 2489,1528 2430,1532 2371,1533 2311,1533 2252,1532 2193,1535 2134,1535 2075,1535 2016,1538 1957,1541 1898,1544 1839,1544 1780,1549"/>
+                <Baseline points="1780,1579 1839,1574 1898,1574 1957,1571 2016,1568 2075,1565 2134,1565 2193,1565 2252,1562 2311,1563 2371,1563 2430,1562 2489,1558 2548,1554 2607,1553 2666,1553 2725,1551 2784,1553 2843,1553 2902,1553 2962,1559"/>
+                <TextEquiv>
+                    <Unicode>sel, sinem günstigen lieben herren</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:4;}">
+                <Coords points="2422,1639 2447,1642 2473,1645 2499,1645 2525,1645 2551,1645 2577,1645 2603,1645 2629,1643 2655,1642 2681,1642 2707,1641 2733,1639 2759,1641 2785,1641 2811,1636 2837,1634 2863,1636 2889,1635 2915,1633 2915,1588 2889,1590 2863,1591 2837,1589 2811,1591 2785,1596 2759,1596 2733,1594 2707,1596 2681,1597 2655,1597 2629,1598 2603,1600 2577,1600 2551,1600 2525,1600 2499,1600 2473,1600 2447,1597 2422,1594"/>
+                <Baseline points="2422,1624 2447,1627 2473,1630 2499,1630 2525,1630 2551,1630 2577,1630 2603,1630 2629,1628 2655,1627 2681,1627 2707,1626 2733,1624 2759,1626 2785,1626 2811,1621 2837,1619 2863,1621 2889,1620 2915,1618"/>
+                <TextEquiv>
+                    <Unicode>unnd bruͦder.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Dem wolgelerten frommen und acht¬
+barnn herren Oswalden Myco¬
+nien, prädicanten zum domstifft Ba¬
+sel, sinem günstigen lieben herren
+unnd bruͦder.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

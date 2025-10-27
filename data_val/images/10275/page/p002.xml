@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-04-23T13:05:59.778+02:00</Created>
+        <LastChange>2025-06-12T21:33:15.002+02:00</LastChange>
+        <TranskribusMetadata docId="9005916" pageId="98979458" pageNr="2" tsid="247702961" status="GT" userId="70106" imgUrl="https://files.transkribus.eu/Get?id=KXLIZSSTUQDIGLBCDVCOKDBO&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=VTKGVLRYLLLUCJDIUJSYQQCN" imageId="80045804"/>
+    </Metadata>
+    <Page imageFilename="p002.jpg" imageWidth="2479" imageHeight="3508">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1757331195095" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="742,994 742,1303 1588,1297 1588,988"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="751,1151 920,1113 955,1111 989,1111 1024,1109 1058,1108 1093,1108 1127,1108 1162,1108 1196,1108 1231,1109 1265,1111 1300,1111 1334,1113 1369,1113 1403,1111 1438,1111 1472,1111 1507,1111 1541,1110 1576,1108 1587,1028 1538,1021 1504,1022 1472,1053 1438,1053 1403,1053 1394,1013 1359,1013 1300,1053 1265,1053 1231,1051 1196,1050 1162,1050 1127,1050 1089,1018 1050,1008 1016,1009 989,1053 955,1053 919,1018 764,1048"/>
+                <Baseline points="886,1095 920,1094 955,1092 989,1092 1024,1090 1058,1089 1093,1089 1127,1089 1162,1089 1196,1089 1231,1090 1265,1092 1300,1092 1334,1094 1369,1094 1403,1092 1438,1092 1472,1092 1507,1092 1541,1091 1576,1089"/>
+                <TextEquiv>
+                    <Unicode>Domino Heinricho Bullin¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="918,1237 950,1235 995,1189 1027,1189 1060,1186 1092,1188 1124,1189 1156,1189 1189,1191 1221,1192 1253,1193 1285,1195 1318,1195 1350,1195 1382,1195 1414,1195 1447,1195 1479,1195 1511,1195 1543,1197 1576,1198 1576,1141 1543,1140 1511,1138 1479,1138 1447,1138 1423,1121 1382,1138 1350,1138 1318,1138 1285,1138 1253,1136 1221,1135 1189,1134 1179,1104 1124,1132 1092,1131 1060,1129 1027,1132 995,1132 963,1133 931,1135"/>
+                <Baseline points="931,1173 963,1171 995,1170 1027,1170 1060,1167 1092,1169 1124,1170 1156,1170 1189,1172 1221,1173 1253,1174 1285,1176 1318,1176 1350,1176 1382,1176 1414,1176 1447,1176 1479,1176 1511,1176 1543,1178 1576,1179"/>
+                <TextEquiv>
+                    <Unicode>gero doctissimo, charissimo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="919,1297 944,1293 970,1290 995,1289 1021,1287 1047,1285 1072,1285 1098,1285 1124,1283 1149,1281 1175,1279 1200,1279 1226,1279 1252,1279 1277,1279 1303,1279 1329,1280 1354,1282 1380,1281 1406,1279 1406,1219 1380,1221 1354,1222 1329,1220 1303,1219 1303,1205 1278,1205 1249,1205 1223,1205 1175,1219 1149,1221 1124,1223 1098,1225 1072,1225 1047,1225 1019,1207 993,1209 970,1230 944,1233 919,1237"/>
+                <Baseline points="919,1277 944,1273 970,1270 995,1269 1021,1267 1047,1265 1072,1265 1098,1265 1124,1263 1149,1261 1175,1259 1200,1259 1226,1259 1252,1259 1277,1259 1303,1259 1329,1260 1354,1262 1380,1261 1406,1259"/>
+                <TextEquiv>
+                    <Unicode>sibi in domino etc.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Domino Heinricho Bullin¬
+gero doctissimo, charissimo
+sibi in domino etc.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

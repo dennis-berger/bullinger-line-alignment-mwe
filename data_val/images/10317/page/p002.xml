@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-04-23T13:06:04.541+02:00</Created>
+        <LastChange>2025-06-12T22:27:38.457+02:00</LastChange>
+        <TranskribusMetadata docId="9005975" pageId="98979494" pageNr="2" tsid="247704615" status="GT" userId="70106" imgUrl="https://files.transkribus.eu/Get?id=SNKGYKYXMNZFHRKFDNVGELAA&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=IVYHMDQSHEIXNQWLTCPPQRAT" imageId="80045810"/>
+    </Metadata>
+    <Page imageFilename="p002.jpg" imageWidth="2479" imageHeight="3508">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1757331194400" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="863,1485 863,1981 1468,1982 1468,1486"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="872,1684 954,1656 957,1628 982,1627 1007,1627 1032,1625 1057,1624 1082,1622 1107,1620 1132,1619 1158,1652 1183,1615 1208,1613 1233,1612 1258,1612 1283,1611 1308,1610 1333,1609 1358,1609 1383,1608 1409,1606 1409,1525 1383,1527 1358,1528 1333,1528 1308,1529 1283,1530 1258,1531 1233,1531 1208,1532 1183,1534 1158,1536 1147,1489 1122,1490 1082,1541 1057,1543 1032,1544 1007,1546 982,1546 957,1547 948,1497 863,1510"/>
+                <Baseline points="907,1606 932,1604 957,1601 982,1600 1007,1600 1032,1598 1057,1597 1082,1595 1107,1593 1132,1592 1158,1590 1183,1588 1208,1586 1233,1585 1258,1585 1283,1584 1308,1583 1333,1582 1358,1582 1383,1581 1409,1579"/>
+                <TextEquiv>
+                    <Unicode>Suo Heinrico</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="1012,1756 1026,1766 1052,1764 1078,1737 1104,1735 1130,1732 1156,1729 1182,1727 1209,1726 1235,1726 1246,1726 1275,1761 1316,1758 1339,1720 1365,1720 1391,1719 1418,1717 1418,1641 1391,1643 1365,1644 1339,1644 1313,1646 1287,1649 1261,1650 1235,1650 1209,1650 1182,1651 1156,1653 1130,1656 1104,1659 1078,1661 1052,1651 1026,1653 1012,1680"/>
+                <Baseline points="1012,1731 1026,1715 1052,1713 1078,1712 1104,1710 1130,1707 1156,1704 1182,1702 1209,1701 1235,1701 1261,1701 1287,1700 1313,1697 1339,1695 1365,1695 1391,1694 1418,1692"/>
+                <TextEquiv>
+                    <Unicode>Bullingero,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="935,1938 1011,1878 1049,1856 1071,1892 1101,1850 1127,1849 1154,1849 1180,1847 1206,1846 1232,1848 1258,1848 1284,1846 1311,1846 1337,1846 1363,1844 1389,1843 1415,1843 1441,1843 1468,1843 1468,1767 1502,1750 1415,1743 1389,1743 1356,1760 1337,1770 1311,1770 1284,1770 1258,1772 1232,1772 1206,1770 1180,1771 1154,1773 1127,1773 1101,1774 1075,1778 1049,1780 1023,1782 997,1785"/>
+                <Baseline points="997,1836 1023,1833 1049,1831 1075,1829 1101,1825 1127,1824 1154,1824 1180,1822 1206,1821 1232,1823 1258,1823 1284,1821 1311,1821 1337,1821 1363,1819 1389,1818 1415,1818 1441,1818 1468,1818"/>
+                <TextEquiv>
+                    <Unicode>super omnem modum</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="1047,1982 1073,1978 1099,1976 1126,1976 1152,1974 1178,1972 1205,1969 1231,1967 1257,1967 1284,1967 1310,1967 1336,1963 1363,1961 1389,1961 1415,1961 1442,1961 1481,1861 1454,1861 1421,1861 1395,1861 1341,1856 1315,1860 1284,1886 1257,1886 1231,1886 1205,1888 1178,1891 1152,1893 1121,1871 1094,1871 1073,1897 1047,1901"/>
+                <Baseline points="1047,1955 1073,1951 1099,1949 1126,1949 1152,1947 1178,1945 1205,1942 1231,1940 1257,1940 1284,1940 1310,1940 1336,1936 1363,1934 1389,1934 1415,1934 1442,1934"/>
+                <TextEquiv>
+                    <Unicode>charissimo fratri.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Suo Heinrico&#13;
+Bullingero,&#13;
+super omnem modum&#13;
+charissimo fratri.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=READ-COOP:name=TrHtr:version=1.9.0:model_id=51170:date=14_05_2023_19:09</Creator>
+        <Created>2021-10-04T08:42:53.841+02:00</Created>
+        <LastChange>2025-05-28T09:42:39.000+02:00</LastChange>
+    </Metadata>
+    <Page imageFilename="0002_0002_151828_0003.tif" imageWidth="3304" imageHeight="5160">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1750319831640" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r1"/>
+                <RegionRefIndexed index="1" regionRef="r2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="r1" custom="readingOrder {index:0;}">
+            <Coords points="380,2964 380,3134 496,3134 496,2964"/>
+            <TextEquiv>
+                <Unicode></Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion orientation="0.0" id="r2" custom="readingOrder {index:1;}">
+            <Coords points="545,-1218 569,1717 3209,1717 3185,-1218"/>
+            <TextLine id="r2l1" custom="readingOrder {index:0;}">
+                <Coords points="565,338 1456,250 1771,329 2626,243 3201,319 3132,171 565,181"/>
+                <Baseline points="582,266 713,266 844,264 976,264 1107,262 1239,262 1370,260 1501,258 1633,257 1764,256 1896,256 2027,254 2158,254 2290,254 2421,254 2553,256 2684,257 2815,260 2947,262 3078,266 3210,270"/>
+                <TextEquiv>
+                    <Unicode>besorgend vß dem componierte werd mit mehme wil¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l2" custom="readingOrder {index:1;}">
+                <Coords points="592,437 3152,398 3191,299 782,269 592,342"/>
+                <Baseline points="610,378 739,374 868,371 998,368 1127,366 1257,364 1386,363 1515,362 1645,360 1774,360 1904,360 2033,358 2162,358 2292,358 2421,358 2551,358 2680,358 2809,358 2939,358 3068,358 3198,358"/>
+                <TextEquiv>
+                    <Unicode>träet die von iub warnd Schluchts nenn wir</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l3" custom="readingOrder {index:2;}">
+                <Coords points="578,509 881,572 1022,496 2826,483 3083,552 3194,398 1338,368 582,447"/>
+                <Baseline points="598,503 966,476 1077,478 1189,480 1301,480 1413,480 1525,480 1636,480 1748,478 1860,478 1972,476 2084,474 2195,472 2307,470 2419,468 2531,468 2643,466 2754,464 2866,464 2978,464 3090,464 3202,464"/>
+                <TextEquiv>
+                    <Unicode>ohne composition munnen, die warheijt ist zu</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l5" custom="readingOrder {index:3;}">
+                <Coords points="592,628 2583,661 3217,615 3217,523 592,526"/>
+                <Baseline points="610,616 740,610 871,604 1001,600 1132,596 1263,592 1393,590 1524,588 1654,586 1785,586 1916,586 2046,586 2177,586 2307,586 2438,588 2569,588 2699,588 2830,588 2960,588 3091,588 3222,586"/>
+                <TextEquiv>
+                    <Unicode>heijten darumb wirth ein groß verfolgen gu¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l6" custom="readingOrder {index:4;}">
+                <Coords points="578,736 1564,789 1870,720 2014,789 2997,690 3198,766 3201,644 3027,601 582,624"/>
+                <Baseline points="596,732 960,712 1072,709 1184,706 1296,704 1409,702 1521,701 1633,700 1746,700 1858,698 1970,698 2083,698 2195,698 2307,698 2419,696 2532,696 2644,695 2756,694 2869,692 2981,690 3093,686 3206,682"/>
+                <TextEquiv>
+                    <Unicode>ben. Gott verlijch der einfalten warheijt 8ys Anno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l8" custom="readingOrder {index:5;}">
+                <Coords points="578,871 3194,808 3066,716 578,736"/>
+                <Baseline points="598,838 728,833 858,829 988,826 1118,824 1249,821 1379,820 1509,818 1639,816 1769,816 1900,814 2030,814 2160,814 2290,812 2420,812 2550,810 2681,808 2811,806 2941,804 3071,802 3202,798"/>
+                <TextEquiv>
+                    <Unicode>plura nunc no potini. Nam nicht denn abcolung nicht</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l9" custom="readingOrder {index:6;}">
+                <Coords points="621,1022 1462,927 3171,986 3207,818 2695,897 1587,815 621,881"/>
+                <Baseline points="638,958 766,951 895,946 1024,940 1153,936 1282,932 1410,929 1539,926 1668,926 1797,924 1926,924 2054,924 2183,924 2312,924 2441,926 2570,926 2698,928 2827,928 2956,930 3085,930 3214,930"/>
+                <TextEquiv>
+                    <Unicode>syndi. Anna ein Vini o malo eo cito samb</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l10" custom="readingOrder {index:7;}">
+                <Coords points="585,1075 1758,1045 2435,1130 3211,1094 3214,966 1988,933 1742,1006 1492,930 585,1012"/>
+                <Baseline points="604,1077 820,1064 939,1059 1059,1053 1179,1050 1298,1046 1418,1044 1538,1042 1657,1040 1777,1038 1897,1038 2017,1038 2136,1038 2256,1038 2376,1039 2495,1040 2615,1041 2735,1042 2854,1044 2974,1044 3094,1046 3214,1046"/>
+                <TextEquiv>
+                    <Unicode>wir ofellt die fernefenetistl. handlung in ha¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l11" custom="readingOrder {index:8;}">
+                <Coords points="657,1193 3211,1206 3175,1088 657,1098"/>
+                <Baseline points="674,1178 801,1175 928,1172 1055,1168 1183,1164 1310,1162 1437,1160 1565,1158 1692,1156 1819,1156 1947,1156 2074,1156 2201,1156 2328,1156 2456,1158 2583,1160 2710,1162 2838,1166 2965,1168 3092,1172 3220,1178"/>
+                <TextEquiv>
+                    <Unicode>ut ut libera Fin dicam in mei secret. The</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l12" custom="readingOrder {index:9;}">
+                <Coords points="595,1324 3204,1344 3168,1196 595,1203"/>
+                <Baseline points="614,1304 743,1297 873,1288 1003,1282 1133,1278 1263,1274 1392,1270 1522,1268 1652,1268 1782,1268 1912,1268 2041,1268 2171,1270 2301,1272 2431,1274 2561,1276 2690,1278 2820,1280 2950,1282 3080,1286 3210,1286"/>
+                <TextEquiv>
+                    <Unicode>dorum pellicamque e reliqui te saluere inbet</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l13" custom="readingOrder {index:10;}">
+                <Coords points="601,1508 726,1502 861,1413 1111,1459 1249,1420 1515,1423 1623,1393 1627,1324 1351,1288 1150,1384 887,1344 707,1384 608,1357"/>
+                <Baseline points="622,1436 672,1429 722,1423 773,1418 823,1415 874,1411 924,1409 974,1407 1025,1406 1075,1405 1126,1404 1176,1404 1226,1402 1277,1402 1327,1400 1378,1400 1428,1398 1478,1396 1529,1393 1579,1389 1630,1384"/>
+                <TextEquiv>
+                    <Unicode>7 May 1. 5. 39</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r2l14" custom="readingOrder {index:11;}">
+                <Coords points="2152,1630 2271,1669 2376,1577 2461,1571 2734,1581 2810,1620 2958,1574 3211,1620 3201,1400 2961,1430 2912,1479 2718,1489 2580,1443 2517,1485 2146,1462"/>
+                <Baseline points="2168,1572 2220,1565 2273,1560 2325,1556 2378,1554 2431,1551 2483,1550 2536,1550 2588,1550 2641,1550 2694,1552 2746,1555 2799,1557 2851,1563 2904,1566 2957,1573 3009,1578 3062,1586 3114,1593 3167,1601 3220,1610"/>
+                <TextEquiv>
+                    <Unicode>H. B—Ungaas ten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>
+
+
+
+
+
+
+
+
+
+
+</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

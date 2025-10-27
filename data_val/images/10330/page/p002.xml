@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-04-23T13:06:15.027+02:00</Created>
+        <LastChange>2025-06-12T22:36:13.161+02:00</LastChange>
+        <TranskribusMetadata docId="9006057" pageId="98979997" pageNr="2" tsid="247705689" status="GT" userId="70106" imgUrl="https://files.transkribus.eu/Get?id=QKUSOXBKNMXWNPFEIYZQEPXF&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=HWCGPDEXTTACGSUTAUJROSUZ" imageId="80045813"/>
+    </Metadata>
+    <Page imageFilename="p002.jpg" imageWidth="2479" imageHeight="3508">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1757331193155" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="882,1558 882,1971 1664,1968 1664,1555"/>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:0;}">
+                <Coords points="895,1674 955,1671 992,1671 1029,1671 1066,1671 1102,1671 1139,1671 1176,1673 1213,1672 1250,1672 1286,1674 1323,1674 1360,1674 1397,1674 1434,1676 1470,1677 1507,1677 1544,1677 1581,1677 1618,1674 1618,1620 1581,1623 1544,1623 1507,1623 1469,1604 1433,1603 1397,1620 1353,1596 1323,1620 1284,1597 1248,1595 1213,1618 1176,1619 1139,1617 1102,1617 1066,1617 1029,1617 982,1566 909,1580 919,1617"/>
+                <Baseline points="919,1653 955,1653 992,1653 1029,1653 1066,1653 1102,1653 1139,1653 1176,1655 1213,1654 1250,1654 1286,1656 1323,1656 1360,1656 1397,1656 1434,1658 1470,1659 1507,1659 1544,1659 1581,1659 1618,1656"/>
+                <TextEquiv>
+                    <Unicode>Domino Heinricho Bullingero,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:1;}">
+                <Coords points="1000,1752 1032,1749 1064,1749 1096,1749 1129,1749 1161,1750 1193,1752 1225,1750 1258,1749 1290,1749 1322,1749 1354,1751 1387,1752 1419,1752 1451,1752 1483,1752 1516,1752 1548,1752 1580,1750 1612,1748 1645,1746 1666,1679 1612,1694 1580,1696 1548,1698 1516,1698 1483,1698 1451,1698 1419,1698 1387,1698 1354,1697 1322,1695 1290,1695 1258,1695 1225,1696 1193,1698 1161,1696 1129,1695 1096,1695 1066,1671 1034,1671 1000,1698"/>
+                <Baseline points="1000,1734 1032,1731 1064,1731 1096,1731 1129,1731 1161,1732 1193,1734 1225,1732 1258,1731 1290,1731 1322,1731 1354,1733 1387,1734 1419,1734 1451,1734 1483,1734 1516,1734 1548,1734 1580,1732 1612,1730 1645,1728"/>
+                <TextEquiv>
+                    <Unicode>charissimo fratri et domino</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="1003,1830 1031,1830 1059,1828 1087,1826 1116,1824 1116,1769 1087,1771 1059,1773 1031,1775 1003,1775"/>
+                <Baseline points="1003,1812 1031,1812 1059,1810 1087,1808 1116,1806"/>
+                <TextEquiv>
+                    <Unicode>suo.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="1095,1967 1130,1986 1157,1967 1184,1967 1211,1967 1238,1967 1265,1969 1292,1970 1319,1970 1346,1967 1346,1912 1319,1915 1300,1882 1264,1894 1238,1912 1224,1853 1197,1853 1157,1912 1128,1894 1093,1894"/>
+                <Baseline points="1104,1949 1130,1949 1157,1949 1184,1949 1211,1949 1238,1949 1265,1951 1292,1952 1319,1952 1346,1949"/>
+                <TextEquiv>
+                    <Unicode>Zürich.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Domino Heinricho Bullingero,&#13;
+charissimo fratri et domino&#13;
+suo.&#13;
+Zürich.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

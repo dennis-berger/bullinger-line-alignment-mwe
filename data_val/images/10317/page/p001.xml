@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-04-23T13:06:04.412+02:00</Created>
+        <LastChange>2025-06-12T22:21:33.715+02:00</LastChange>
+        <TranskribusMetadata docId="9005975" pageId="98979537" pageNr="1" tsid="247704550" status="GT" userId="70106" imgUrl="https://files.transkribus.eu/Get?id=UVHIVQWCGECQACFSBOKZWVGT&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=SUQTULUFOTNMDZGKDVJUUMXH" imageId="80045822"/>
+    </Metadata>
+    <Page imageFilename="p001.jpg" imageWidth="3508" imageHeight="2479">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1757331194178" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="456,193 456,2470 3231,2470 3231,193"/>
+            <TextLine id="line_1749759379404_372" custom="readingOrder {index:0;}">
+                <Coords points="3191,195 3017,195 3017,99 3191,99"/>
+                <TextEquiv>
+                    <Unicode>{MT}[37.]</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_1" custom="readingOrder {index:1;}">
+                <Coords points="456,253 584,250 712,248 840,247 968,247 1096,247 1224,247 1353,244 1481,244 1609,241 1737,241 1865,241 1993,239 2121,241 2250,244 2378,248 2506,254 2634,255 2762,252 2890,250 3127,250 3127,204 2890,204 2762,206 2634,209 2506,208 2378,202 2250,198 2121,195 1993,193 1865,195 1737,195 1609,195 1481,198 1353,198 1224,201 1096,201 968,201 840,201 712,202 584,204 456,207"/>
+                <Baseline points="456,238 584,235 712,233 840,232 968,232 1096,232 1224,232 1353,229 1481,229 1609,226 1737,226 1865,226 1993,224 2121,226 2250,229 2378,233 2506,239 2634,240 2762,237 2890,235 3019,229"/>
+                <TextEquiv>
+                    <Unicode>S. Uff 12 statt der ratt uff, kumpt min bott, hab ich von stund an dine brieff uffs gwissest versorget,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:2;}">
+                <Coords points="495,343 628,337 762,330 896,328 1030,322 1164,322 1297,322 1431,319 1565,319 1699,313 1833,313 1966,311 2100,316 2234,316 2368,316 2502,322 2635,322 2769,322 2903,331 3037,322 3171,319 3171,273 3037,276 2903,285 2769,276 2635,276 2502,276 2368,270 2234,270 2100,270 1966,265 1833,267 1699,267 1565,273 1431,273 1297,276 1164,276 1030,276 896,282 762,284 628,291 495,297"/>
+                <Baseline points="495,328 628,322 762,315 896,313 1030,307 1164,307 1297,307 1431,304 1565,304 1699,298 1833,298 1966,296 2100,301 2234,301 2368,301 2502,307 2635,307 2769,307 2903,316 3037,307 3171,304"/>
+                <TextEquiv>
+                    <Unicode>suͦchen Sepianum, zeig imm din brieff, zeigt er mir an, daß in gheim beschlossen, unsern botten zuͦ gschriben,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:3;}">
+                <Coords points="480,432 612,419 745,411 877,405 1010,402 1143,399 1275,394 1408,393 1541,389 1673,387 1806,388 1939,388 2071,386 2204,385 2337,389 2469,388 2602,387 2735,390 2867,396 3000,387 3133,390 3133,347 3000,344 2867,353 2735,347 2602,344 2469,345 2337,346 2204,342 2071,343 1939,345 1806,345 1673,344 1541,346 1408,350 1275,351 1143,356 1010,359 877,362 745,368 612,376 480,389"/>
+                <Baseline points="480,418 612,405 745,397 877,391 1010,388 1143,385 1275,380 1408,379 1541,375 1673,373 1806,374 1939,374 2071,372 2204,371 2337,375 2469,374 2602,373 2735,376 2867,382 3000,373 3133,376"/>
+                <TextEquiv>
+                    <Unicode>kein richtung anzenämen, so dem globen nachteilig. So es aber nitt anders möchte sin, söllend sy</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:4;}">
+                <Coords points="480,489 610,478 740,473 871,468 1001,464 1132,464 1262,462 1392,462 1523,460 1653,459 1784,455 1914,455 2044,454 2175,451 2305,457 2436,458 2566,457 2696,454 2827,457 2957,454 3088,460 3088,423 2957,417 2827,420 2696,417 2566,420 2436,421 2305,420 2175,414 2044,417 1914,418 1784,418 1653,422 1523,423 1392,425 1262,425 1132,427 1001,427 871,431 740,436 610,441 480,452"/>
+                <Baseline points="480,477 610,466 740,461 871,456 1001,452 1132,452 1262,450 1392,450 1523,448 1653,447 1784,443 1914,443 2044,442 2175,439 2305,445 2436,446 2566,445 2696,442 2827,445 2957,442 3088,448"/>
+                <TextEquiv>
+                    <Unicode>sich erlütren, si habend in allem scheiden das beest  gethon, diewil es aber zuͦ nachteil reicht unsers gloubens,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:5;}">
+                <Coords points="477,558 614,547 752,540 890,537 1027,537 1165,531 1303,531 1440,535 1578,540 1716,528 1854,524 1991,522 2129,522 2267,522 2404,522 2542,522 2680,524 2817,520 2955,516 3093,510 3231,519 3231,482 3093,473 2955,479 2817,483 2680,487 2542,485 2404,485 2267,485 2129,485 1991,485 1854,487 1716,491 1578,503 1440,498 1303,494 1165,494 1027,500 890,500 752,503 614,510 477,521"/>
+                <Baseline points="477,546 614,535 752,528 890,525 1027,525 1165,519 1303,519 1440,523 1578,528 1716,516 1854,512 1991,510 2129,510 2267,510 2404,510 2542,510 2680,512 2817,508 2955,504 3093,498 3231,507"/>
+                <TextEquiv>
+                    <Unicode>wellind min herren damitt nütt ze schaffen haben, jedoch sich hiemitt erlütren, so jemant understuͤnde,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:6;}">
+                <Coords points="474,627 606,623 739,615 872,608 1005,608 1138,603 1270,600 1403,603 1536,603 1669,600 1802,597 1934,597 2067,597 2200,597 2333,600 2466,595 2598,594 2731,591 2864,586 2997,580 3130,576 3130,530 2997,534 2864,540 2731,545 2598,548 2466,549 2333,554 2200,551 2067,551 1934,551 1802,551 1669,554 1536,557 1403,557 1270,554 1138,557 1005,562 872,562 739,569 606,577 474,581"/>
+                <Baseline points="474,612 606,608 739,600 872,593 1005,593 1138,588 1270,585 1403,588 1536,588 1669,585 1802,582 1934,582 2067,582 2200,582 2333,585 2466,580 2598,579 2731,576 2864,571 2997,565 3130,561"/>
+                <TextEquiv>
+                    <Unicode>mitt gwalt und gewerter hand durch ir land und ertrich ze zühen, werdind sy sömlichs nitt</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:7;}">
+                <Coords points="460,720 625,693 753,681 881,678 1008,672 1136,670 1264,669 1391,669 1519,667 1647,666 1775,665 1902,660 2030,666 2158,663 2285,663 2413,661 2541,658 2668,659 2796,653 2924,651 3052,648 3052,602 2924,605 2796,607 2668,613 2541,612 2413,615 2285,617 2158,617 2030,620 1902,614 1775,619 1647,620 1519,621 1391,623 1264,623 1136,624 1008,626 881,632 753,635 625,647 460,674"/>
+                <Baseline points="498,693 625,678 753,666 881,663 1008,657 1136,655 1264,654 1391,654 1519,652 1647,651 1775,650 1902,645 2030,651 2158,648 2285,648 2413,646 2541,643 2668,644 2796,638 2924,636 3052,633"/>
+                <TextEquiv>
+                    <Unicode>gstatten, sunder ir land und ertrich vor gwalt ze schirmen. Hoc a Sępiano intellexi. Wie wol es</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:8;}">
+                <Coords points="480,779 616,766 753,755 889,746 1026,745 1162,739 1299,733 1435,731 1572,731 1708,729 1845,733 1981,734 2118,730 2254,730 2391,733 2527,730 2664,728 2800,725 2937,719 3073,713 3210,713 3210,667 3073,667 2937,673 2800,679 2664,682 2527,684 2391,687 2254,684 2118,684 1981,688 1845,687 1708,683 1572,685 1435,685 1299,687 1162,693 1026,699 889,700 753,709 616,720 480,733"/>
+                <Baseline points="480,764 616,751 753,740 889,731 1026,730 1162,724 1299,718 1435,716 1572,716 1708,714 1845,718 1981,719 2118,715 2254,715 2391,718 2527,715 2664,713 2800,710 2937,704 3073,698 3210,698"/>
+                <TextEquiv>
+                    <Unicode>dahin kummen, das die von stat und land Soloturn soltend ze allen siten heimzihen und erwarten, was die schidlütt</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:9;}">
+                <Coords points="486,845 617,842 749,833 881,824 1013,818 1144,813 1276,807 1408,805 1540,801 1671,803 1803,803 1935,802 2067,803 2198,798 2330,803 2462,800 2594,803 2725,798 2857,792 2989,790 3121,785 3121,739 2989,744 2857,746 2725,752 2594,757 2462,754 2330,757 2198,752 2067,757 1935,756 1803,757 1671,757 1540,755 1408,759 1276,761 1144,767 1013,772 881,778 749,787 617,796 486,799"/>
+                <Baseline points="486,830 617,827 749,818 881,809 1013,803 1144,798 1276,792 1408,790 1540,786 1671,788 1803,788 1935,787 2067,788 2198,783 2330,788 2462,785 2594,788 2725,783 2857,777 2989,775 3121,770"/>
+                <TextEquiv>
+                    <Unicode>uff die unsern ordnind, ussgenomen die 8 man, deren sy zum ersten begert, die söllind ir land</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:10;}">
+                <Coords points="483,925 615,913 748,904 880,902 1013,893 1146,887 1278,887 1411,881 1544,881 1676,881 1809,878 1942,875 2074,870 2207,868 2340,866 2472,872 2605,866 2738,866 2870,863 3003,860 3136,863 3136,817 3003,814 2870,817 2738,820 2605,820 2472,826 2340,820 2207,822 2074,824 1942,829 1809,832 1676,835 1544,835 1411,835 1278,841 1146,841 1013,847 880,856 748,858 615,867 483,879"/>
+                <Baseline points="483,910 615,898 748,889 880,887 1013,878 1146,872 1278,872 1411,866 1544,866 1676,866 1809,863 1942,860 2074,855 2207,853 2340,851 2472,857 2605,851 2738,851 2870,848 3003,845 3136,848"/>
+                <TextEquiv>
+                    <Unicode>und biet rumen. Deinde sind fier papisten Saloturenses an ein puren kummen, so mitt einer hellenbarten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:11;}">
+                <Coords points="495,997 623,988 752,982 881,973 1010,968 1138,962 1267,961 1396,960 1525,954 1653,952 1782,949 1911,949 2040,943 2168,940 2297,937 2426,937 2555,931 2683,934 2812,937 2941,928 3070,931 3070,885 2941,882 2812,891 2683,888 2555,885 2426,891 2297,891 2168,894 2040,897 1911,903 1782,903 1653,906 1525,908 1396,914 1267,915 1138,916 1010,922 881,927 752,936 623,942 495,951"/>
+                <Baseline points="495,982 623,973 752,967 881,958 1010,953 1138,947 1267,946 1396,945 1525,939 1653,937 1782,934 1911,934 2040,928 2168,925 2297,922 2426,922 2555,916 2683,919 2812,922 2941,913 3070,916"/>
+                <TextEquiv>
+                    <Unicode>und schlachtschwert bewert, im  gfraget, wo er hin welle. Hat er bekent, ad nostrę fidei fratres. Hend</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1745840500042_2336" custom="readingOrder {index:12;}">
+                <Coords points="487,1033 601,1018 653,1014 730,986 1438,960 1765,978 2743,961 2852,960 3120,960 3120,1006 833,1069 487,1079"/>
+                <Baseline points="576,1051 601,1049 627,1047 653,1045 678,1045 704,1044 730,1041 755,1042 781,1049 807,1052 833,1054 901,1042 1003,1033 1112,1029 1221,1025 1330,1021 1438,1015 1547,1015 1656,1014 1765,1009 1873,1012 1982,1014 2091,1006 2200,1004 2308,1000 2417,1000 2526,997 2635,994 2743,992 2852,991 2961,991 3070,991"/>
+                <TextEquiv>
+                    <Unicode>si uff inn gschlagen, hatt er sich gewert und zwen ghüwen, daß si tod sind. Wo die übrigen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:13;}">
+                <Coords points="486,1146 615,1131 744,1126 873,1123 1002,1117 1132,1114 1261,1107 1390,1103 1519,1099 1648,1095 1778,1099 1907,1105 2036,1105 2165,1099 2294,1096 2423,1096 2553,1095 2682,1092 2811,1090 2940,1084 3070,1084 3070,1038 2940,1038 2811,1044 2682,1046 2556,1025 2426,1026 2294,1050 2165,1053 2036,1059 1907,1059 1795,1029 1665,1025 1519,1053 1390,1057 1261,1061 1132,1068 1002,1071 873,1077 744,1080 615,1085 486,1100"/>
+                <Baseline points="486,1131 615,1116 744,1111 873,1108 1002,1102 1132,1099 1261,1092 1390,1088 1519,1084 1648,1080 1778,1084 1907,1090 2036,1090 2165,1084 2294,1081 2423,1081 2553,1080 2682,1077 2811,1075 2940,1069 3070,1069"/>
+                <TextEquiv>
+                    <Unicode>nitt abtretten, wär es inen als bald ouch übel graten. Hęc nunc habeo. Indefessum me comperies, modo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1745840504262_2341" custom="readingOrder {index:14;}">
+                <Coords points="507,1163 559,1157 716,1149 1571,1115 1642,1115 1642,1161 939,1214 507,1209"/>
+                <Baseline points="507,1194 533,1191 559,1188 585,1188 611,1187 637,1185 664,1184 690,1182 716,1180 742,1179 768,1179 794,1179 821,1179 939,1199 974,1179 1009,1178 1044,1178 1079,1176 1114,1176 1149,1174 1185,1171 1220,1169 1255,1167 1290,1167 1325,1165 1360,1162 1395,1160 1431,1158 1466,1155 1501,1153 1536,1149 1571,1146 1606,1146 1642,1146"/>
+                <TextEquiv>
+                    <Unicode>nuncios habeam, quibus fidam. Vale ut supra.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_17" custom="readingOrder {index:15;}">
+                <Coords points="2132,1329 2157,1328 2182,1326 2207,1326 2232,1325 2258,1321 2283,1320 2308,1320 2333,1319 2383,1317 2383,1271 2352,1200 2314,1238 2284,1202 2222,1251 2232,1279 2207,1280 2170,1212 2145,1214 2132,1283"/>
+                <Baseline points="2132,1314 2157,1313 2182,1311 2207,1311 2232,1310 2258,1306 2283,1305 2308,1305 2333,1304 2359,1302"/>
+                <TextEquiv>
+                    <Unicode>B. H.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>{MT}[37.]
+S. Uff 12 statt der ratt uff, kumpt min bott, hab ich von stund an dine brieff uffs gwissest versorget,
+suͦchen Sepianum, zeig imm din brieff, zeigt er mir an, daß in gheim beschlossen, unsern botten zuͦ gschriben,
+kein richtung anzenämen, so dem globen nachteilig. So es aber nitt anders möchte sin, söllend sy
+sich erlütren, si habend in allem scheiden das beest  gethon, diewil es aber zuͦ nachteil reicht unsers gloubens,
+wellind min herren damitt nütt ze schaffen haben, jedoch sich hiemitt erlütren, so jemant understuͤnde,
+mitt gwalt und gewerter hand durch ir land und ertrich ze zühen, werdind sy sömlichs nitt
+gstatten, sunder ir land und ertrich vor gwalt ze schirmen. Hoc a Sępiano intellexi. Wie wol es
+dahin kummen, das die von stat und land Soloturn soltend ze allen siten heimzihen und erwarten, was die schidlütt
+uff die unsern ordnind, ussgenomen die 8 man, deren sy zum ersten begert, die söllind ir land
+und biet rumen. Deinde sind fier papisten Saloturenses an ein puren kummen, so mitt einer hellenbarten
+und schlachtschwert bewert, im  gfraget, wo er hin welle. Hat er bekent, ad nostrę fidei fratres. Hend
+si uff inn gschlagen, hatt er sich gewert und zwen ghüwen, daß si tod sind. Wo die übrigen
+nitt abtretten, wär es inen als bald ouch übel graten. Hęc nunc habeo. Indefessum me comperies, modo
+nuncios habeam, quibus fidam. Vale ut supra.
+B. H.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>
