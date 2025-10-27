@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
 # Prefer the L40S if available (48GB VRAM); V100 works with 4-bit:
-# #SBATCH --nodelist=diufrd203   # L40S
+#SBATCH --nodelist=diufrd203   # L40S
 # #SBATCH --nodelist=diufrd204   # V100 32GB
 
 set -euo pipefail
