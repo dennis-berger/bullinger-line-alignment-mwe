@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH --job-name=bullinger_qwen
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
