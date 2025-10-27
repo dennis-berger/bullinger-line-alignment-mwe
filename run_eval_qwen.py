@@ -4,7 +4,7 @@
 Bullinger MWE with Qwen3-VL:
 - Walk data_val/gt/*.txt to get IDs
 - Collect images in data_val/images/<ID>/** (supports multi-page)
-- Transcribe with Qwen/Qwen3-VL-32B-Instruct (vision-language)
+- Transcribe with Qwen/Qwen3-VL-8B-Instruct (vision-language)
 - Write predictions/<ID>.txt
 - Compute WER/CER (raw + normalized) -> evaluation_qwen.csv
 
@@ -89,7 +89,7 @@ def write_text(p: str, t: str):
 class QwenCfg:
     model_id: str = "Qwen/Qwen3-VL-8B-Instruct"
     device: str = "auto"   # "auto"|"cuda"|"cpu"
-    max_new_tokens: int = 2048
+    max_new_tokens: int = 1200
 
 class QwenTranscriber:
     def __init__(self, cfg: QwenCfg):
@@ -99,7 +99,6 @@ class QwenTranscriber:
         self.torch = torch
         self.device = "cuda" if (cfg.device in ("auto", "cuda") and torch.cuda.is_available()) else "cpu"
         self.processor = AutoProcessor.from_pretrained(cfg.model_id, trust_remote_code=True)
-        # device_map="auto" spreads across available GPU RAM (important for big models)
         self.model = AutoModelForVision2Seq.from_pretrained(
             cfg.model_id,
             device_map="auto" if self.device == "cuda" else None,
@@ -109,27 +108,47 @@ class QwenTranscriber:
         self.max_new_tokens = cfg.max_new_tokens
 
     def _prompt(self) -> str:
-        # Keep instructions strict to avoid extra commentary
         return (
-            "Transcribe the following handwritten page into plain text. "
-            "Output ONLY the raw transcription. Preserve line breaks. "
-            "Do not add explanations, translation, or extra characters."
+            "Transcribe this handwritten page to plain text. "
+            "Output ONLY the transcription. Preserve line breaks. No extra words."
         )
 
+    def _generate_one(self, img):
+        # Build chat message with image + text; this inserts image tokens correctly.
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": img},
+                    {"type": "text",  "text": self._prompt()},
+                ],
+            }
+        ]
+        text = self.processor.apply_chat_template(
+            messages, add_generation_prompt=True, tokenize=False
+        )
+        inputs = self.processor(text=[text], images=[img], return_tensors="pt")
+        if self.device == "cuda":
+            inputs = {k: v.to("cuda") for k, v in inputs.items()}
+
+        out_ids = self.model.generate(
+            **inputs,
+            max_new_tokens=self.max_new_tokens,
+            do_sample=False,
+            temperature=0.0,
+            repetition_penalty=1.05,
+        )
+        out = self.processor.batch_decode(out_ids, skip_special_tokens=True)[0]
+        return out.strip()
+
     def transcribe_images(self, image_paths: List[str]) -> str:
-        from transformers import GenerationConfig
+        from PIL import Image
         texts = []
         for p in image_paths:
             img = Image.open(p).convert("RGB")
-            inputs = self.processor(images=img, text=self._prompt(), return_tensors="pt")
-            # Move to the same device as model (for CPU this is a no-op)
-            if self.device == "cuda":
-                inputs = {k: v.to("cuda") for k, v in inputs.items()}
-            gen_cfg = GenerationConfig(max_new_tokens=self.max_new_tokens)
-            out_ids = self.model.generate(**inputs, generation_config=gen_cfg)
-            text = self.processor.batch_decode(out_ids, skip_special_tokens=True)[0].strip()
-            texts.append(text)
+            texts.append(self._generate_one(img))
         return "\n".join(texts).strip()
+
 
 # ---------------- Main ----------------
 def main():
@@ -137,7 +156,7 @@ def main():
     ap.add_argument("--data-dir", default="data_val", help="folder containing gt/ and images/")
     ap.add_argument("--out-dir", default="predictions", help="where to write predictions")
     ap.add_argument("--eval-csv", default="evaluation_qwen.csv", help="output CSV path")
-    ap.add_argument("--hf-model", default="Qwen/Qwen3-VL-32B-Instruct")
+    ap.add_argument("--hf-model", default="Qwen/Qwen3-VL-8B-Instruct")
     ap.add_argument("--hf-device", default="auto", choices=["auto", "cuda", "cpu"])
     ap.add_argument("--max-new-tokens", type=int, default=2048)
     args = ap.parse_args()
