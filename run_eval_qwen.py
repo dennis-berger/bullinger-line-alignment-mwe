@@ -85,24 +85,26 @@ def write_text(p: str, t: str):
         f.write(t)
 
 # ---------------- Qwen backend ----------------
+from dataclasses import dataclass
+from typing import List
+from PIL import Image
+import torch
+from transformers import AutoProcessor, AutoModelForVision2Seq
+
 @dataclass
 class QwenCfg:
     model_id: str = "Qwen/Qwen3-VL-8B-Instruct"
-    device: str = "auto"   # "auto"|"cuda"|"cpu"
-    max_new_tokens: int = 800  # trimmed to ease VRAM
+    device: str = "auto"   # "auto" | "cuda" | "cpu"
+    max_new_tokens: int = 800
 
 class QwenTranscriber:
     def __init__(self, cfg: QwenCfg):
-        import torch
-        from transformers import AutoProcessor, AutoModelForVision2Seq
-
-        self.torch = torch
         self.device = "cuda" if (cfg.device in ("auto", "cuda") and torch.cuda.is_available()) else "cpu"
         self.processor = AutoProcessor.from_pretrained(cfg.model_id, trust_remote_code=True)
 
-        load_kwargs = {"trust_remote_code": True}
+        load_kwargs = dict(trust_remote_code=True)
         if self.device == "cuda":
-            # Prefer 4-bit quantization to fit on 32GB
+            # Prefer 4-bit quantization to fit on 32GB V100
             try:
                 load_kwargs.update({
                     "device_map": "auto",
@@ -117,9 +119,6 @@ class QwenTranscriber:
                     "device_map": "auto",
                     "torch_dtype": torch.float16,
                 })
-        else:
-            # CPU fallback (slow)
-            pass
 
         self.model = AutoModelForVision2Seq.from_pretrained(cfg.model_id, **load_kwargs)
         self.model.eval()
@@ -131,18 +130,17 @@ class QwenTranscriber:
             "Output ONLY the transcription. Preserve line breaks. No extra words."
         )
 
-    def _downscale(self, img, max_side=1280):
-        # Gentle downscale to reduce vision token count and VRAM
+    def _downscale(self, img: Image.Image, max_side: int = 1280) -> Image.Image:
         w, h = img.size
         s = max(w, h)
         if s <= max_side:
             return img
         scale = max_side / float(s)
-        return img.resize((int(w*scale), int(h*scale)))
+        return img.resize((int(w * scale), int(h * scale)))
 
-    @self.torch.inference_mode()
-    def _generate_one(self, img):
-        # Build chat message properly so image tokens align with features
+    @torch.inference_mode()
+    def _generate_one(self, img: Image.Image) -> str:
+        # Build chat message so image tokens align with features
         messages = [{
             "role": "user",
             "content": [
@@ -166,16 +164,14 @@ class QwenTranscriber:
         return self.processor.batch_decode(out_ids, skip_special_tokens=True)[0].strip()
 
     def transcribe_images(self, image_paths: List[str]) -> str:
-        from PIL import Image
         texts = []
         for p in image_paths:
             img = Image.open(p).convert("RGB")
             img = self._downscale(img, max_side=1280)
             txt = self._generate_one(img)
             texts.append(txt)
-            # free some memory between pages
             if self.device == "cuda":
-                self.torch.cuda.empty_cache()
+                torch.cuda.empty_cache()
         return "\n".join(texts).strip()
 
 # ---------------- Main ----------------
