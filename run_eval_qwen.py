@@ -89,7 +89,7 @@ def write_text(p: str, t: str):
 class QwenCfg:
     model_id: str = "Qwen/Qwen3-VL-8B-Instruct"
     device: str = "auto"   # "auto"|"cuda"|"cpu"
-    max_new_tokens: int = 1200
+    max_new_tokens: int = 800  # trimmed to ease VRAM
 
 class QwenTranscriber:
     def __init__(self, cfg: QwenCfg):
@@ -99,12 +99,30 @@ class QwenTranscriber:
         self.torch = torch
         self.device = "cuda" if (cfg.device in ("auto", "cuda") and torch.cuda.is_available()) else "cpu"
         self.processor = AutoProcessor.from_pretrained(cfg.model_id, trust_remote_code=True)
-        self.model = AutoModelForVision2Seq.from_pretrained(
-            cfg.model_id,
-            device_map="auto" if self.device == "cuda" else None,
-            torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-            trust_remote_code=True,
-        )
+
+        load_kwargs = {"trust_remote_code": True}
+        if self.device == "cuda":
+            # Prefer 4-bit quantization to fit on 32GB
+            try:
+                load_kwargs.update({
+                    "device_map": "auto",
+                    "load_in_4bit": True,
+                    "bnb_4bit_compute_dtype": torch.float16,
+                    "bnb_4bit_quant_type": "nf4",
+                    "bnb_4bit_use_double_quant": True,
+                })
+            except Exception:
+                # Fallback to fp16 if bitsandbytes not available
+                load_kwargs.update({
+                    "device_map": "auto",
+                    "torch_dtype": torch.float16,
+                })
+        else:
+            # CPU fallback (slow)
+            pass
+
+        self.model = AutoModelForVision2Seq.from_pretrained(cfg.model_id, **load_kwargs)
+        self.model.eval()
         self.max_new_tokens = cfg.max_new_tokens
 
     def _prompt(self) -> str:
@@ -113,20 +131,26 @@ class QwenTranscriber:
             "Output ONLY the transcription. Preserve line breaks. No extra words."
         )
 
+    def _downscale(self, img, max_side=1280):
+        # Gentle downscale to reduce vision token count and VRAM
+        w, h = img.size
+        s = max(w, h)
+        if s <= max_side:
+            return img
+        scale = max_side / float(s)
+        return img.resize((int(w*scale), int(h*scale)))
+
+    @self.torch.inference_mode()
     def _generate_one(self, img):
-        # Build chat message with image + text; this inserts image tokens correctly.
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    {"type": "image", "image": img},
-                    {"type": "text",  "text": self._prompt()},
-                ],
-            }
-        ]
-        text = self.processor.apply_chat_template(
-            messages, add_generation_prompt=True, tokenize=False
-        )
+        # Build chat message properly so image tokens align with features
+        messages = [{
+            "role": "user",
+            "content": [
+                {"type": "image", "image": img},
+                {"type": "text",  "text": self._prompt()},
+            ],
+        }]
+        text = self.processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
         inputs = self.processor(text=[text], images=[img], return_tensors="pt")
         if self.device == "cuda":
             inputs = {k: v.to("cuda") for k, v in inputs.items()}
@@ -136,19 +160,23 @@ class QwenTranscriber:
             max_new_tokens=self.max_new_tokens,
             do_sample=False,
             temperature=0.0,
+            num_beams=1,
             repetition_penalty=1.05,
         )
-        out = self.processor.batch_decode(out_ids, skip_special_tokens=True)[0]
-        return out.strip()
+        return self.processor.batch_decode(out_ids, skip_special_tokens=True)[0].strip()
 
     def transcribe_images(self, image_paths: List[str]) -> str:
         from PIL import Image
         texts = []
         for p in image_paths:
             img = Image.open(p).convert("RGB")
-            texts.append(self._generate_one(img))
+            img = self._downscale(img, max_side=1280)
+            txt = self._generate_one(img)
+            texts.append(txt)
+            # free some memory between pages
+            if self.device == "cuda":
+                self.torch.cuda.empty_cache()
         return "\n".join(texts).strip()
-
 
 # ---------------- Main ----------------
 def main():
