@@ -40,7 +40,7 @@ MODEL="./.hf/Qwen3-VL-8B-Instruct"
 which python
 python -c "import torch; print('CUDA available:', torch.cuda.is_available())"
 
-python run_eval_qwen_m1.py \
+python run_eval_m1.py \
   --data-dir data_val \
   --hf-model "$MODEL" \
   --hf-device cuda \
