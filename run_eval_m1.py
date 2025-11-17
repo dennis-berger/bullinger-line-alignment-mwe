@@ -141,13 +141,17 @@ class QwenLineBreaker:
             f"{transcription}\n\n"
             "Your task:\n"
             "1. Insert newline characters so that the lines correspond to the line breaks "
-            "visible in the image.\n"
-            "2. Do NOT change, remove, or add any characters (letters, punctuation, accents, etc.).\n"
-            "3. Only insert newline characters between existing characters/words.\n"
+            "   visible in the image.\n"
+            "2. You may insert newline characters either between words OR inside words, "
+            "   if the line in the image breaks in the middle of a word.\n"
+            "3. Do NOT change, remove, or add any characters (letters, punctuation, accents, etc.).\n"
+            "   Do NOT insert hyphen characters at line breaks; if the page splits a word, "
+            "   just split the word across two lines without adding '-'.\n"
             "4. Preserve the exact order and spelling of all characters.\n"
             "5. Output ONLY the re-formatted transcription with newline characters, "
-            "no explanations or extra text."
+            "   no explanations or extra text."
         )
+
 
     # ---------- Image helper ----------
 
@@ -246,7 +250,21 @@ class QwenLineBreaker:
             num_beams=1,
             repetition_penalty=1.05,
         )
-        return self.processor.batch_decode(out_ids, skip_special_tokens=True)[0].strip()
+        raw = self.processor.batch_decode(out_ids, skip_special_tokens=True)[0]
+
+        # --- Extract only the assistant part ---
+        cleaned = raw.strip()
+        marker = "\nassistant\n"
+        idx = cleaned.rfind(marker)
+        if idx != -1:
+            cleaned = cleaned[idx + len(marker):].strip()
+
+        # just in case it starts with a bare 'assistant' token
+        if cleaned.startswith("assistant"):
+            cleaned = cleaned[len("assistant"):].lstrip()
+
+        return cleaned
+
 
     def infer_line_breaks(self, image_paths: List[str], transcription: str) -> str:
         """
