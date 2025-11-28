@@ -38,7 +38,7 @@ MODEL="./.hf/Qwen3-VL-8B-Instruct"
 which python
 python -c "import torch; print('CUDA available:', torch.cuda.is_available())"
 
-python run_eval_qwen_m1.py \
+python run_eval_m1.py.py \
   --data-dir bullinger_print_dataset \
   --out-dir bullinger_print_predictions_m1 \
   --eval-csv bullinger_print_eval_qwen_m1.csv \
