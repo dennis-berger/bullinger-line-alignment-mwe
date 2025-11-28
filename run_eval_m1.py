@@ -9,7 +9,7 @@ Method 1: Bullinger with Qwen3-VL (image(s) + transcription):
   - Load the CORRECT transcription (no line breaks) from
     data_val/transcription/<ID>.txt.
   - Split the transcription across pages (heuristic, by character length).
-  - For each page i: send (image_i, chunk_i) to Qwen to *only* insert line breaks.
+  - For each page i: send (image_i, chunk_i) to Qwen to only insert line breaks.
 - Concatenate all page-level outputs → prediction for that letter.
 - Evaluate vs data_val/gt/<ID>.txt:
     - WER / CER (raw + whitespace-normalized)
@@ -91,7 +91,7 @@ class QwenCfg:
 
 class QwenLineBreaker:
     """
-    Use Qwen3-VL to insert line breaks into a *given* correct transcription
+    Use Qwen3-VL to insert line breaks into a given correct transcription
     based on the visual layout of a multi-page letter.
 
     - We have one transcription string for the whole letter.
@@ -268,7 +268,7 @@ class QwenLineBreaker:
 
     def infer_line_breaks(self, image_paths: List[str], transcription: str) -> str:
         """
-        Method 1 core: use *all* page images.
+        Method 1 core: use all page images.
 
         - Split the full transcription into N page chunks.
         - For each page i, run Qwen on (image_i, chunk_i).

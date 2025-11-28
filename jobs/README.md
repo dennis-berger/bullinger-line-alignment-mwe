@@ -21,3 +21,10 @@ sbatch jobs/eval_gpu_qwen.sbatch
 squeue -u $USER
 tail -f logs/bullinger_qwen_*.out
 ```
+
+Copy results to local machine:
+```bashß
+scp bergerd@diufrd200.unifr.ch:~/projects/bullinger-line-alignment-mwe/<evaluationfile> .
+scp -r bergerd@diufrd200.unifr.ch:~/projects/bullinger-line-alignment-mwe/predictions ./predictions
+
+```
