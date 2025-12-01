@@ -74,6 +74,60 @@ def line_accuracy(ref: str, hyp: str) -> float:
             correct += 1
     return correct / n
 
+def reverse_line_accuracy(ref: str, hyp: str) -> float:
+    """
+    Line-level accuracy, but align from the last line upward.
+
+    - Compare the last line of ref with the last line of hyp, then move upward.
+    - If one side has fewer lines, missing lines are treated as empty.
+    - Exact string match required for a line to be counted as correct.
+    """
+    ref_lines = _split_lines(ref)
+    hyp_lines = _split_lines(hyp)
+
+    if not ref_lines and not hyp_lines:
+        return 1.0
+    if not ref_lines and hyp_lines:
+        return 0.0
+
+    n = max(len(ref_lines), len(hyp_lines))
+    correct = 0
+    for i in range(n):
+        r_idx = len(ref_lines) - 1 - i
+        h_idx = len(hyp_lines) - 1 - i
+        r = ref_lines[r_idx] if r_idx >= 0 else ""
+        h = hyp_lines[h_idx] if h_idx >= 0 else ""
+        if r == h:
+            correct += 1
+    return correct / n
+
+def reverse_line_accuracy_norm(ref: str, hyp: str) -> float:
+    """
+    Normalized reverse line-level accuracy:
+    same as reverse_line_accuracy, but normalize whitespace inside each line.
+    """
+    def norm_line(line: str) -> str:
+        return normalize_whitespace(line)
+
+    ref_lines = [norm_line(l) for l in _split_lines(ref)]
+    hyp_lines = [norm_line(l) for l in _split_lines(hyp)]
+
+    if not ref_lines and not hyp_lines:
+        return 1.0
+    if not ref_lines and hyp_lines:
+        return 0.0
+
+    n = max(len(ref_lines), len(hyp_lines))
+    correct = 0
+    for i in range(n):
+        r_idx = len(ref_lines) - 1 - i
+        h_idx = len(hyp_lines) - 1 - i
+        r = ref_lines[r_idx] if r_idx >= 0 else ""
+        h = hyp_lines[h_idx] if h_idx >= 0 else ""
+        if r == h:
+            correct += 1
+    return correct / n
+
 def line_accuracy_norm(ref: str, hyp: str) -> float:
     """
     Normalized line-level accuracy:

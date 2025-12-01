@@ -6,7 +6,7 @@ Minimal pipeline for Bullinger MWE:
 - Find images in data_val/images/<ID>/
 - Transcribe with Hugging Face TrOCR (or Tesseract)
 - Write predictions to predictions/<ID>.txt
-- Compute WER/CER and write evaluation.csv
+- Compute WER/CER and line-level accuracy (forward + reverse) and write evaluation.csv
 
 Backends:
   - hf_trocr (default): Hugging Face VisionEncoderDecoder (TrOCR)
@@ -28,6 +28,12 @@ from dataclasses import dataclass
 from typing import List
 
 from PIL import Image
+from metrics import (
+    line_accuracy,
+    line_accuracy_norm,
+    reverse_line_accuracy,
+    reverse_line_accuracy_norm,
+)
 
 # ---------------- Metrics ----------------
 def _levenshtein(a: list, b: list) -> int:
@@ -190,6 +196,7 @@ def main():
 
     rows = []
     sum_wer = sum_cer = sum_wn = sum_cn = 0.0
+    sum_la = sum_lan = sum_rla = sum_rlan = 0.0
     n = 0
 
     for gt_path in gt_files:
@@ -206,18 +213,55 @@ def main():
         gt = read_text(gt_path)
         w, c = wer(gt, pred), cer(gt, pred)
         wn, cn = wer(normalize(gt), normalize(pred)), cer(normalize(gt), normalize(pred))
-        rows.append([sample_id, len(gt), len(pred), w, c, wn, cn])
-        sum_wer += w; sum_cer += c; sum_wn += wn; sum_cn += cn; n += 1
-        print(f"[OK] {sample_id}: WER={w:.3f} CER={c:.3f} (norm WER={wn:.3f} CER={cn:.3f})")
+        la  = line_accuracy(gt, pred)
+        lan = line_accuracy_norm(gt, pred)
+        rla = reverse_line_accuracy(gt, pred)
+        rlan = reverse_line_accuracy_norm(gt, pred)
+
+        rows.append([sample_id, len(gt), len(pred), w, c, wn, cn, la, lan, rla, rlan])
+        sum_wer += w; sum_cer += c; sum_wn += wn; sum_cn += cn
+        sum_la += la; sum_lan += lan; sum_rla += rla; sum_rlan += rlan
+        n += 1
+        print(
+            f"[OK] {sample_id}: "
+            f"WER={w:.3f} CER={c:.3f} "
+            f"(norm WER={wn:.3f} CER={cn:.3f}) "
+            f"LineAcc={la:.3f} LineAcc_norm={lan:.3f} "
+            f"RevLineAcc={rla:.3f} RevLineAcc_norm={rlan:.3f}"
+        )
 
     if n > 0:
         os.makedirs(os.path.dirname(args.eval_csv) or ".", exist_ok=True)
         with open(args.eval_csv, "w", newline="", encoding="utf-8") as f:
             wtr = csv.writer(f)
-            wtr.writerow(["id", "len_gt", "len_pred", "wer", "cer", "wer_norm", "cer_norm"])
+            wtr.writerow([
+                "id",
+                "len_gt",
+                "len_pred",
+                "wer",
+                "cer",
+                "wer_norm",
+                "cer_norm",
+                "line_acc",
+                "line_acc_norm",
+                "rev_line_acc",
+                "rev_line_acc_norm",
+            ])
             wtr.writerows(rows)
             wtr.writerow([])
-            wtr.writerow(["macro_avg", "", "", sum_wer/n, sum_cer/n, sum_wn/n, sum_cn/n])
+            wtr.writerow([
+                "macro_avg",
+                "",
+                "",
+                sum_wer/n,
+                sum_cer/n,
+                sum_wn/n,
+                sum_cn/n,
+                sum_la/n,
+                sum_lan/n,
+                sum_rla/n,
+                sum_rlan/n,
+            ])
         print(f"\nWrote {args.eval_csv} with {n} samples.")
     else:
         print("No evaluated samples.", file=sys.stderr)

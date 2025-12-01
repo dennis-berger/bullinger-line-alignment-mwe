@@ -6,7 +6,8 @@ Bullinger MWE with Qwen3-VL:
 - Collect images in data_val/images/<ID>/** (supports multi-page)
 - Transcribe with Qwen/Qwen3-VL-8B-Instruct (vision-language)
 - Write predictions/<ID>.txt
-- Compute WER/CER (raw + normalized) -> evaluation_qwen.csv
+- Compute WER/CER and line-level accuracy (forward + reverse, raw + normalized)
+  -> evaluation_qwen.csv
 
 """
 
@@ -19,34 +20,15 @@ from dataclasses import dataclass
 from typing import List
 
 from PIL import Image
-
-# ---------------- Metrics (pure Python) ----------------
-def _lev(a: list, b: list) -> int:
-    n, m = len(a), len(b)
-    if n == 0: return m
-    if m == 0: return n
-    dp = list(range(m + 1))
-    for i in range(1, n + 1):
-        prev, dp[0] = dp[0], i
-        for j in range(1, m + 1):
-            tmp = dp[j]
-            cost = 0 if a[i - 1] == b[j - 1] else 1
-            dp[j] = min(dp[j] + 1, dp[j - 1] + 1, prev + cost)
-            prev = tmp
-    return dp[m]
-
-def wer(ref: str, hyp: str) -> float:
-    rt, ht = ref.strip().split(), hyp.strip().split()
-    if not rt: return 0.0 if not ht else 1.0
-    return _lev(rt, ht) / max(1, len(rt))
-
-def cer(ref: str, hyp: str) -> float:
-    rc, hc = list(ref.strip()), list(hyp.strip())
-    if not rc: return 0.0 if not hc else 1.0
-    return _lev(rc, hc) / max(1, len(rc))
-
-def normalize_whitespace(s: str) -> str:
-    return " ".join(s.split())
+from metrics import (
+    wer,
+    cer,
+    normalize_whitespace,
+    line_accuracy,
+    line_accuracy_norm,
+    reverse_line_accuracy,
+    reverse_line_accuracy_norm,
+)
 
 # ---------------- Data helpers ----------------
 IMG_EXTS = (".jpg", ".jpeg", ".png", ".tif", ".tiff")
@@ -85,9 +67,6 @@ def write_text(p: str, t: str):
         f.write(t)
 
 # ---------------- Qwen backend ----------------
-from dataclasses import dataclass
-from typing import List
-from PIL import Image
 import torch
 from transformers import AutoProcessor, AutoModelForVision2Seq
 
@@ -202,6 +181,7 @@ def main():
     rows = []
     n = 0
     sum_w = sum_c = sum_wn = sum_cn = 0.0
+    sum_la = sum_lan = sum_rla = sum_rlan = 0.0
 
     for gt_path in gt_files:
         sample_id = os.path.splitext(os.path.basename(gt_path))[0]
@@ -216,19 +196,56 @@ def main():
         gt = read_text(gt_path)
         w, c = wer(gt, pred), cer(gt, pred)
         wn, cn = wer(normalize_whitespace(gt), normalize_whitespace(pred)), cer(normalize_whitespace(gt), normalize_whitespace(pred))
-        rows.append([sample_id, len(gt), len(pred), w, c, wn, cn])
-        sum_w += w; sum_c += c; sum_wn += wn; sum_cn += cn; n += 1
-        print(f"[OK] {sample_id}: WER={w:.3f} CER={c:.3f} (norm WER={wn:.3f} CER={cn:.3f})")
+        la  = line_accuracy(gt, pred)
+        lan = line_accuracy_norm(gt, pred)
+        rla = reverse_line_accuracy(gt, pred)
+        rlan = reverse_line_accuracy_norm(gt, pred)
+
+        rows.append([sample_id, len(gt), len(pred), w, c, wn, cn, la, lan, rla, rlan])
+        sum_w += w; sum_c += c; sum_wn += wn; sum_cn += cn
+        sum_la += la; sum_lan += lan; sum_rla += rla; sum_rlan += rlan
+        n += 1
+        print(
+            f"[OK] {sample_id}: "
+            f"WER={w:.3f} CER={c:.3f} "
+            f"(norm WER={wn:.3f} CER={cn:.3f}) "
+            f"LineAcc={la:.3f} LineAcc_norm={lan:.3f} "
+            f"RevLineAcc={rla:.3f} RevLineAcc_norm={rlan:.3f}"
+        )
 
     # Write CSV (+ macro average)
     os.makedirs(os.path.dirname(args.eval_csv) or ".", exist_ok=True)
     with open(args.eval_csv, "w", newline="", encoding="utf-8") as f:
         wtr = csv.writer(f)
-        wtr.writerow(["id", "len_gt", "len_pred", "wer", "cer", "wer_norm", "cer_norm"])
+        wtr.writerow([
+            "id",
+            "len_gt",
+            "len_pred",
+            "wer",
+            "cer",
+            "wer_norm",
+            "cer_norm",
+            "line_acc",
+            "line_acc_norm",
+            "rev_line_acc",
+            "rev_line_acc_norm",
+        ])
         wtr.writerows(rows)
         if n > 0:
             wtr.writerow([])
-            wtr.writerow(["macro_avg", "", "", sum_w/n, sum_c/n, sum_wn/n, sum_cn/n])
+            wtr.writerow([
+                "macro_avg",
+                "",
+                "",
+                sum_w/n,
+                sum_c/n,
+                sum_wn/n,
+                sum_cn/n,
+                sum_la/n,
+                sum_lan/n,
+                sum_rla/n,
+                sum_rlan/n,
+            ])
 
     print(f"\nWrote {args.eval_csv} with {n} samples.")
 

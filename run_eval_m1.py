@@ -9,11 +9,11 @@ Method 1: Bullinger with Qwen3-VL (image(s) + transcription):
   - Load the CORRECT transcription (no line breaks) from
     data_val/transcription/<ID>.txt.
   - Split the transcription across pages (heuristic, by character length).
-  - For each page i: send (image_i, chunk_i) to Qwen to only insert line breaks.
+- For each page i: send (image_i, chunk_i) to Qwen to only insert line breaks.
 - Concatenate all page-level outputs → prediction for that letter.
 - Evaluate vs data_val/gt/<ID>.txt:
     - WER / CER (raw + whitespace-normalized)
-    - line-level accuracy (raw + normalized)
+    - line-level accuracy (forward + reverse, raw + normalized)
 - Write predictions_m1/<ID>.txt and evaluation_qwen_m1.csv.
 """
 
@@ -35,6 +35,8 @@ from metrics import (
     normalize_whitespace,
     line_accuracy,
     line_accuracy_norm,
+    reverse_line_accuracy,
+    reverse_line_accuracy_norm,
 )
 
 # ---------------- Data helpers ----------------
@@ -334,7 +336,7 @@ def main():
     rows = []
     n = 0
     sum_w = sum_c = sum_wn = sum_cn = 0.0
-    sum_la = sum_lan = 0.0
+    sum_la = sum_lan = sum_rla = sum_rlan = 0.0
 
     for gt_path in gt_files:
         sample_id = os.path.splitext(os.path.basename(gt_path))[0]
@@ -373,6 +375,8 @@ def main():
         # line-level metrics (Bullinger-style analogue)
         la  = line_accuracy(gt, pred)
         lan = line_accuracy_norm(gt, pred)
+        rla = reverse_line_accuracy(gt, pred)
+        rlan = reverse_line_accuracy_norm(gt, pred)
 
         rows.append([
             sample_id,
@@ -380,6 +384,7 @@ def main():
             len(pred),
             w, c, wn, cn,
             la, lan,
+            rla, rlan,
         ])
 
         sum_w  += w
@@ -388,13 +393,16 @@ def main():
         sum_cn += cn
         sum_la += la
         sum_lan += lan
+        sum_rla += rla
+        sum_rlan += rlan
         n += 1
 
         print(
             f"[OK] {sample_id}: "
             f"WER={w:.3f} CER={c:.3f} "
             f"(norm WER={wn:.3f} CER={cn:.3f}) "
-            f"LineAcc={la:.3f} LineAcc_norm={lan:.3f}"
+            f"LineAcc={la:.3f} LineAcc_norm={lan:.3f} "
+            f"RevLineAcc={rla:.3f} RevLineAcc_norm={rlan:.3f}"
         )
 
     # ----- Write CSV (+ macro average) -----
@@ -411,6 +419,8 @@ def main():
             "cer_norm",
             "line_acc",
             "line_acc_norm",
+            "rev_line_acc",
+            "rev_line_acc_norm",
         ])
         wtr.writerows(rows)
         if n > 0:
@@ -425,6 +435,8 @@ def main():
                 sum_cn / n,
                 sum_la / n,
                 sum_lan / n,
+                sum_rla / n,
+                sum_rlan / n,
             ])
 
     print(f"\nWrote {args.eval_csv} with {n} samples.")
